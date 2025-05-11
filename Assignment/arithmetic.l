@@ -4,12 +4,12 @@
 
 %%
 
-^EXIT\n              { return 0; }  // Exit on typing EXIT
+^EXIT\n              { return 0; }  
 
 [0-9]+               { printf("Number: %s\n", yytext); }
 [\+\-\*/]            { printf("Operator: %s\n", yytext); }
 [\(\)]               { printf("Parenthesis: %s\n", yytext); }
-[ \t\n]+             { /* Skip whitespace */ }
+[ \t\n]+             {  }
 .                    { printf("Invalid character: %s\n", yytext); }
 
 %%
